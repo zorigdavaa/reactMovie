@@ -2,21 +2,13 @@ import { Text, View } from "react-native";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text className="text-blue-500">Edit55dessx.tsxss to e55dit this screen.</Text>
-      <Text className="text-red-500">new text</Text>
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="text-blue-500 text-xl font-bold">
+        Welcome to NativeWind!
+      </Text>
+      <Text className="text-red-500 mt-4">
+        New red text below the blue one
+      </Text>
     </View>
   );
-}
-
-const redStyle = {
-  box: {
-    color: "blue"
-  }
 }
