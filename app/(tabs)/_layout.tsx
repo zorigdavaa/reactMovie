@@ -1,7 +1,13 @@
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
 import { Tabs } from "expo-router";
-import { Image, ImageBackground, ImageSourcePropType } from "react-native";
+import {
+  Image,
+  ImageBackground,
+  ImageSourcePropType,
+  Text,
+  View
+} from "react-native";
 
 export function BarIcon(
   focused: boolean,
@@ -13,21 +19,47 @@ export function BarIcon(
       <>
         <ImageBackground
           source={images.highlight}
-          className="flex flew-row min-w-[80px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden"
+          className="flex flew-row min-w-[80px] min-h-16 mt-4 justify-center items-center rounded-full overflow-hidden"
         >
-          <Image source={iconPath} tintColor="#151312" className="size-5" />
-          {/* <Text>{Title}</Text> */}
+          <Image source={iconPath} tintColor="black" className="size-5" />
+          <Text>{Title}</Text>
         </ImageBackground>
       </>
     );
   } else {
-    return <Image source={iconPath} tintColor="#151312" className="size-5" />;
+    return (
+      <View>
+        <Image source={iconPath} tintColor="grey" className="size-5" />
+      </View>
+    );
   }
 }
 export default function tabsLayout() {
   return (
     // <Stack/>
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarShowLabel: false,
+
+        tabBarItemStyle: {
+          height: "100%",
+          width: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+        },
+        tabBarStyle: {
+          backgroundColor: "#0f0d23",
+          borderRadius: 50,
+          marginHorizontal: 50,
+          marginBottom: 40,
+          height: 52,
+          position: "absolute",
+          overflow: "hidden",
+          borderWidth: 1,
+          borderColor: "white",
+        },
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
@@ -35,7 +67,7 @@ export default function tabsLayout() {
           title: "Home",
           tabBarIcon: ({ focused }) => BarIcon(focused, "Home", icons.home),
         }}
-      />  
+      />
       <Tabs.Screen
         name="search"
         options={{
