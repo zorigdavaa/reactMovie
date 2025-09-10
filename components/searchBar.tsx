@@ -1,13 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { icons } from "@/constants/icons";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 const SearchBar = () => {
   return (
     <View>
+      <Image source={icons.search} />
       <Text>SearchBarTest</Text>
     </View>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
