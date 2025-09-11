@@ -80,7 +80,7 @@ const timetracking = () => {
 
   function ClockOut(): void {
     console.log("Clock OUT");
-    const url = baseUrl + "/time-tracking/clockin";
+    const url = baseUrl + "/time-tracking/clockout";
     axios
       .request({
         method: "POST",
