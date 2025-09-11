@@ -5,12 +5,12 @@ const _layout = () => {
   return (
     <Stack>
       <Stack.Screen
-        name="(timetracks)/login"
-        options={{ headerShown: false }}
+        name="Login"
+        options={{ headerShown: true }}
       />
       <Stack.Screen
-        name="(timetracks)/timetracking"
-        options={{ headerShown: false }}
+        name="Timetracking"
+        options={{ headerShown: true }}
       />
     </Stack>
   );

@@ -75,3 +75,9 @@ interface TrendingCardProps {
   movie: TrendingMovie;
   index: number;
 }
+interface TimeTracking {
+  Date: string;
+  ClockIn: string;
+  ClockOut: string;
+  WorkedHours: string;
+}

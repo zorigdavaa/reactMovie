@@ -29,7 +29,7 @@ const LoginScreen = () => {
     console.log(token);
 
     setLoading(false);
-    router.push("/timetracking");
+    router.push("/Timetracking");
   }
 
   return (

@@ -19,7 +19,7 @@ export default function Index() {
           className="w-12 h-10 mt-20 mb-5 mx-auto"
         ></Image>
         <View className="flex-1" mt-5>
-          <SearchBar onPress={() => router.push("/search")} placeHolder= "Search for a move" />
+          <SearchBar onPress={() => router.push("/Search")} placeHolder= "Search for a move" />
         </View>
       </ScrollView>
     </View>
