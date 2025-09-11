@@ -9,11 +9,11 @@ const saved = () => {
       <Text>savesd</Text>
       <Button
         title="goto time trackings"
-        onPress={() => router.navigate("/others/timetracking")}
+        onPress={() => router.navigate("/(timetracks)/timetracking")}
       />
       <Button
         title="go to login"
-        onPress={() => router.navigate("/others/Login")}
+        onPress={() => router.navigate("/(timetracks)/Login")}
       />
     </SafeAreaView>
   );

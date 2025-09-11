@@ -1,12 +1,17 @@
+import { TokenContext } from "@/contexts/TokenContext";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
-import { useState } from "react";
+import { useRouter } from "expo-router";
+import { useContext, useState } from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState<string>("zorigoo.nexus@yahoo.com");
   const [password, setPassword] = useState<string>("123456");
   const [loading, setLoading] = useState<boolean>(false);
+  const { setToken } = useContext(TokenContext);
+  const router = useRouter();
+
   async function login() {
     const url = "https://api.blackcandy.io/v1/login";
     setLoading(true);
@@ -16,11 +21,15 @@ const LoginScreen = () => {
       { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
     );
 
-    const data = response.data.json();
+    const data = response.data;
     const token = data.token;
     AsyncStorage.setItem("token", token);
+    setToken(token);
     console.log("Now data");
     console.log(token);
+
+    setLoading(false);
+    router.push("/timetracking");
   }
 
   return (
@@ -41,8 +50,9 @@ const LoginScreen = () => {
       ></TextInput>
       <Button title="Login" onPress={login} />
       <Text>
-
-        email is {email} and password is {password}
+        {loading
+          ? "Loading..."
+          : `email is ${email} and password is ${password}`}
       </Text>
     </View>
   );

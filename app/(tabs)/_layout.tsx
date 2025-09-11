@@ -6,7 +6,7 @@ import {
   ImageBackground,
   ImageSourcePropType,
   Text,
-  View
+  View,
 } from "react-native";
 
 export function BarIcon(
