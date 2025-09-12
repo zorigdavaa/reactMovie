@@ -39,7 +39,7 @@ export default function tabsLayout() {
     // <Stack/>
     <Tabs
       screenOptions={{
-        tabBarShowLabel: false,
+        tabBarShowLabel: true,
 
         tabBarItemStyle: {
           height: "100%",
@@ -63,7 +63,7 @@ export default function tabsLayout() {
       <Tabs.Screen
         name="Index"
         options={{
-          headerShown: false,
+          headerShown: true,
           title: "Home",
           tabBarIcon: ({ focused }) => BarIcon(focused, "Home", icons.home),
         }}
@@ -71,7 +71,7 @@ export default function tabsLayout() {
       <Tabs.Screen
         name="Login"
         options={{
-          headerShown: false,
+          headerShown: true,
           title: "Login",
           tabBarIcon: ({ focused }) => BarIcon(focused, "Login", icons.save),
         }}
