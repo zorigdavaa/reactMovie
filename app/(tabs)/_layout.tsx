@@ -69,14 +69,14 @@ export default function tabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="Search"
+        name="Login"
         options={{
           headerShown: false,
-          title: "Search",
-          tabBarIcon: ({ focused }) => BarIcon(focused, "Search", icons.search),
+          title: "Login",
+          tabBarIcon: ({ focused }) => BarIcon(focused, "Login", icons.save),
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="Profile"
         options={{
           headerShown: false,
@@ -91,7 +91,7 @@ export default function tabsLayout() {
           title: "Saved",
           tabBarIcon: ({ focused }) => BarIcon(focused, "Saved", icons.save),
         }}
-      />
+      /> */}
     </Tabs>
   );
 }

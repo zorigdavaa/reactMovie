@@ -7,7 +7,7 @@ import Toast from "react-native-toast-message";
 
 const baseUrl = "https://api.blackcandy.io/v1";
 
-const Timetracking = () => {
+const Home = () => {
   const [loading, setLoading] = useState(false);
   const { token } = useContext(TokenContext);
   const { mytracks, setMytracks } = useContext(MytracksContext);
@@ -139,6 +139,6 @@ const Timetracking = () => {
   );
 };
 
-export default Timetracking;
+export default Home;
 
 const styles = StyleSheet.create({});
